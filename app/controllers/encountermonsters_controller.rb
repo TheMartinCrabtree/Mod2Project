@@ -1,0 +1,2 @@
+class EncountermonstersController < ApplicationController
+end

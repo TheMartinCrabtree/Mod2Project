@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  size: MyString
+  alignment: MyString
+  armor_class: 1
+  hit_points: 1
+  challenge_rating: 1.5
+
+two:
+  name: MyString
+  type: 
+  size: MyString
+  alignment: MyString
+  armor_class: 1
+  hit_points: 1
+  challenge_rating: 1.5

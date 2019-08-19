@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  player_hp: 1
+  player_level: 1
+
+two:
+  name: MyString
+  player_hp: 1
+  player_level: 1
