@@ -1,2 +1,4 @@
 class EncountersController < ApplicationController
+    
+
 end

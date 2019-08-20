@@ -19,5 +19,6 @@ player5 = Player.create(name: "Franco", player_level: 10, player_hp: 28, dungeon
 player6 = Player.create(name: "Ali", player_level: 9, player_hp: 41, dungeonmaster:dm2)
 
 
+encounter1 = Encounter.create(dungeonmaster_id: dm1.id, name: "Round One Fight!")
 
 
