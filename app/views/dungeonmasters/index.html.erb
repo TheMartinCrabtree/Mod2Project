@@ -1,1 +1,14 @@
 <h1>DM Index</h1>
+
+<div>
+<h1>Index of Encounters</h1>
+    <% @encounters.each do |encounter|%>
+    <li><%= link_to encounter.name, encounter_path %></li>
+    <%end%>
+
+
+</div>
+
+
+<%= link_to "Create A Player", new_player_path%>
+<%= link_to "Create An Encounter", new_encounter_path%>

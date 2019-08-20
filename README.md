@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Intended as a tool to help DM's manage encounters and create randomized encounters based off party level and hp. Built by Ross Perkel and Martin Crabtree for FlatIron School.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version   -  2.6.1
 
-* System dependencies
+* Database creation - rails db:create
 
-* Configuration
+* Database initialization  - rails db:migrate 
 
-* Database creation
+* Database seeding - rails db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 
