@@ -1,5 +1,6 @@
 class DungeonmastersController < ApplicationController
 
+
     def index
         @dungeonmasters = Dungeonmaster.all
     end
@@ -23,6 +24,7 @@ class DungeonmastersController < ApplicationController
 
     def dm_params
         params.require(:dungeonmaster).permit(:name, :username, :password)
+
     end
 
 end
