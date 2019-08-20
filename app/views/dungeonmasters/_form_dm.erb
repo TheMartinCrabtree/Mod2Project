@@ -1,0 +1,14 @@
+<h1>Create/Edit A DM</h1>
+
+<%= form_for @dungeonmaster do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :username %>
+<%= f.text_field :username %>
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+
+<%end%>

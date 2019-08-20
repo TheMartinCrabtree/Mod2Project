@@ -1,0 +1,14 @@
+<% form_for @player do |p| %>
+
+<%= p.label :name %>
+<%= p.text_field :name %>
+
+<%= p.label :player_hp %>
+<%= p.number_field :player_hp %>
+
+<%= p.label :player_level %>
+<%= p.text_field :player_level %>
+
+<%= p.submit %>
+
+<% end %>
