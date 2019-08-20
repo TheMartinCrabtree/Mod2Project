@@ -20,4 +20,5 @@ player6 = Player.create(name: "Ali", player_level: 9, player_hp: 41, dungeonmast
 
 
 
-
+dm1 = Dungeonmaster.create(name: "Martin", password: "abc123", username: "DungeonMaster 1")
+dm2 = Dungeonmaster.create(name: "Ross", password: "abc123", username: "DungeonMaster 2")

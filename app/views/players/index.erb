@@ -1,0 +1,16 @@
+<h1>Welcome to your Players Index Page</h1>
+
+<% @players.each do |player| %>
+<div>
+<li>My name is <%= player.name %></li>
+<li>HP: <%= player.player_hp %> </li>
+<li>Level: <%= player.player_level %> </li>
+<br>
+<%= link_to "Edit My Stats", @player %>
+<!-- need to properly set this link_to -->
+</div><br>
+<%end%>
+
+<%= link_to "Create a New Player", new_player_path %>
+<%= link_to "View All Encounters", encounters_path%>
+<%= link_to "View All Monsters", monsters_path%>
