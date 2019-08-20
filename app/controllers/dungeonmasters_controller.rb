@@ -3,6 +3,7 @@ class DungeonmastersController < ApplicationController
 
     def index
         @dungeonmasters = Dungeonmaster.all
+        #need to somehow have this associated with the instance of dm we're signed in as
     end
     
     def new
@@ -24,7 +25,6 @@ class DungeonmastersController < ApplicationController
 
     def dm_params
         params.require(:dungeonmaster).permit(:name, :username, :password)
-
     end
 
 end
