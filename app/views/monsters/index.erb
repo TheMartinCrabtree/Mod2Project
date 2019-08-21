@@ -1,6 +1,13 @@
 <h1>Select a Monster to Learn More</h1>
-<%= link_to "All Players", players_path %>
+<%= link_to "All Players", players_path %> <br>
+<%= link_to "All Encounters", encounters_path %> <br>
+<%= link_to "Logout", "/welcome" %> <br>
 
+
+
+ <h1>Full Monster List</h1>
 <% @monsters.each do |monster| %>
-<li><%= link_to monster.monster_name, monster  %> </li>
+<div class="card" style="width: 18rem">
+<li><%= link_to monster.monster_name, monster, class: "card-link"  %> </li>
+</div>
 <%end%>
