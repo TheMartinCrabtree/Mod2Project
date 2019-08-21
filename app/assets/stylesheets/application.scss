@@ -17,14 +17,41 @@
 @import url('https://fonts.googleapis.com/css?family=Metal+Mania&display=swap');
 
  body {
-     background-color: blue;
+     background-color: lightblue;
     background-image: url(/assets/bg_template.jpg);
     
  }
 
- h1, h2, h3, h4, h5, li {
+ h1, h2, h3, h4, h5, p, a {
     font-family: "Metal Mania";
  }
 
+ h1{
+    text-align: center;
+
+ }
+
+ .flex-container{
+
+     display: grid;
+     
+    // flex-flow: row wrap;
+    // align-content: space-around;
+    // justify-content: flex-start;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 1em;
+    text-align: center;
+
+}
+
+.centeredbox{
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+}
+
+.blindcenter{
+    text-align: center;
+}
 
     

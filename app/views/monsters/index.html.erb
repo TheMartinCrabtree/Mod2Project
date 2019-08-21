@@ -1,13 +1,20 @@
 <h1>Select a Monster to Learn More</h1>
+
+<div class="blindcenter">
+<div class = "centeredbox">
 <%= link_to "All Players", players_path %> <br>
 <%= link_to "All Encounters", encounters_path %> <br>
 <%= link_to "Logout", "/welcome" %> <br>
-
+</div>
+</div>
 
 
  <h1>Full Monster List</h1>
+ <div class="flex-container">
+ 
 <% @monsters.each do |monster| %>
-<div class="card" style="width: 18rem">
-<li><%= link_to monster.monster_name, monster, class: "card-link"  %> </li>
+<div class="card monstercard" style="width: 10rem">
+<p><%= link_to monster.monster_name, monster, class: "card-link"  %> </p>
 </div>
 <%end%>
+</div>
