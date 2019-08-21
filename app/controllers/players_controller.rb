@@ -3,19 +3,22 @@ class PlayersController < ApplicationController
     before_action :find_player, only: [:show, :edit, :update]
 
     def index
-        @players = Player.all
+        @players = @current_dm.players
     end
     
     def new
         @player = Player.new
+        
     end
-
+    
     def show
     end
     
     def create
-        @player = Player.create(player_params)
-        redirect_to players_path
+        @player = Player.new(player_params)
+        @player.dungeonmaster_id = session["dungeonmaster_id"]
+        @player.save
+        redirect_to @player
     end
 
     
@@ -28,7 +31,11 @@ class PlayersController < ApplicationController
     end
     
     def destroy
+        @player.destroy
+        redirect_to players_path
     end
+
+
 
     private
 
@@ -37,7 +44,7 @@ class PlayersController < ApplicationController
     end
 
     def player_params
-        params.require(:player).permit(:name, :player_hp, :player_level)
+        params.require(:player).permit(:name, :player_hp, :player_level, :dungeonmaster_id)
     end
 
 
