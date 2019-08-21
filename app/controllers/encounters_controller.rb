@@ -6,6 +6,16 @@ class EncountersController < ApplicationController
     end
 
     
+
+    def index 
+        @encounters = Encounter.all
+    end
+
+    def new
+        @encounter = Encounter.new
+    end
+
+
     def create
         @encounter = Encounter.create(encounter_params)
         if(@encounter.valid?)
