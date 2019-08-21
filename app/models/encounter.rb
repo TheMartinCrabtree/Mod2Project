@@ -16,7 +16,6 @@ class Encounter < ApplicationRecord
       xp_per_mob = xp_per_mob / monster_multiplier(monster_count)
       monster_cr = get_monster_cr(xp_per_mob)
       monster_list = Monster.find_by_cr(monster_cr)
-      byebug
     end
   end
 
@@ -99,15 +98,15 @@ class Encounter < ApplicationRecord
         when 9      then @party_xp_total+=1100
         when 10     then @party_xp_total+=1200
         when 11     then @party_xp_total+=1600
-        when 12     then @party_xp_total+=1600
-        when 13     then @party_xp_total+=1600
-        when 14     then @party_xp_total+=1600
-        when 15     then @party_xp_total+=1600
-        when 16     then @party_xp_total+=1600
-        when 17     then @party_xp_total+=1600
-        when 18     then @party_xp_total+=1600
-        when 19     then @party_xp_total+=1600
-        when 20     then @party_xp_total+=1600
+        when 12     then @party_xp_total+=2000
+        when 13     then @party_xp_total+=2200
+        when 14     then @party_xp_total+=2500
+        when 15     then @party_xp_total+=2800
+        when 16     then @party_xp_total+=3200
+        when 17     then @party_xp_total+=3900
+        when 18     then @party_xp_total+=4200
+        when 19     then @party_xp_total+=4900
+        when 20     then @party_xp_total+=5700
       end
     end
 
