@@ -1,0 +1,8 @@
+<h1>Encounters INdex</h1>
+
+<%= link_to "Create an Encounter", new_encounter_path %>
+
+<% @encounters.each do |encounter| %>
+<li> THe name of this encounter is <%= link_to encounter.name %></li>
+
+<% end %>
