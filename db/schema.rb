@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2019_08_20_151715) do
     t.bigint "dungeonmaster_id"
     t.bigint "player_id"
     t.string "name"
+    t.integer "monster_quantity"
+    t.string "terrain_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dungeonmaster_id"], name: "index_encounters_on_dungeonmaster_id"
