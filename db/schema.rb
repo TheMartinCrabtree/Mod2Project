@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2019_08_20_151715) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +35,8 @@ ActiveRecord::Schema.define(version: 2019_08_20_151715) do
   create_table "encounters", force: :cascade do |t|
     t.bigint "dungeonmaster_id"
     t.string "name"
+    t.integer "monster_quantity"
+    t.string "terrain_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["dungeonmaster_id"], name: "index_encounters_on_dungeonmaster_id"
