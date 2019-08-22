@@ -1,11 +1,13 @@
 <h1><%= @monster.monster_name %></h1>
 
-<ul>
-<li> AC: <%= @monster.armor_class %></li>
-<li> HP: <%= @monster.hit_points %></li>
-<li> CR: <%= @monster.challenge_rating %></li>
+<ul class="blindcenter">
+<p> AC: <%= @monster.armor_class %></p>
+<p> HP: <%= @monster.hit_points %></p>
+<p> CR: <%= @monster.challenge_rating %></p>
 <br>
-<li> Type: <%= @monster.monster_type %></li>
-<li> Size: <%= @monster.monster_size %></li>
-<li> Alignment: <%= @monster.monster_alignment %></li>
+<p> Type: <%= @monster.monster_type %></p>
+<p> Size: <%= @monster.monster_size %></p>
+<p> Alignment: <%= @monster.monster_alignment %></p>
+
+<%= link_to "All Monsters", monsters_path %>
 </ul>
