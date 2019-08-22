@@ -1,5 +1,30 @@
-<h1>Show Encounter</h1>
+<h1>Encounter: <%= @encounter.name %> </h1>
+<div>
+    Dungeon Master: <%= @encounter.dungeonmaster.name %>
+</div>
+<div>
+    <ul>
+        Players: <% @encounter.players.each do |player| %>
+            <li>
+                <span> Name: <%= player.name %>  </span>
+                <span> Level: <%= player.player_level %>  </span>
+                <span> HP: <%= player.player_hp %> </span> 
+            </li>
+        <% end %>
+    </ul>
+</div>
+<div>
+    Monsters: <% @encounter.encountermonsters.each do |encountermonster| %>
+        
+        <li>
+        <span>Name: <%= link_to encountermonster.monster.monster_name, encountermonster.monster %> </span>
+        <span>CR: <%= encountermonster.monster.challenge_rating %></span>
+        <span> <%= button_to "remove", encountermonster, method: :delete, :encounter => {:id => @encounter.id} %> </span>
+        </li>
+    <% end %>
+</div>
+
+<%= link_to "Return to Encounter Index", encounters_path %>
 
 
-<%= render 'form_encounters' %>
 

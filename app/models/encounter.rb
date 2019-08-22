@@ -1,9 +1,10 @@
 class Encounter < ApplicationRecord
   belongs_to :dungeonmaster
-  has_many :playerencounters 
+  has_many :playerencounters, dependent: :destroy 
   has_many :players, through: :playerencounters
+  has_many :encountermonsters, dependent: :destroy
   has_many :monsters, through: :encountermonsters
-  has_and_belongs_to_many :monsters
+  
 
 
   # xp per CR = Monster Manual pg 10
