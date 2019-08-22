@@ -2,15 +2,19 @@ class Encounter < ApplicationRecord
   belongs_to :dungeonmaster
   has_many :playerencounters 
   has_many :players, through: :playerencounters
+  has_many :monsters, through: :encountermonsters
   has_and_belongs_to_many :monsters
 
 
   # xp per CR = Monster Manual pg 10
   # player xp threshold = DMG pg 82
+
+  def get_target_cr
+
+  end
+
   
-  def get_monster_list
-    #temp monster count need to create column
-    monster_count = 2
+  def get_monster_list(monster_count)
     if(monster_count > 0)
       xp_per_mob = calc_party_xp_threshold / monster_count
       xp_per_mob = xp_per_mob / monster_multiplier(monster_count)
@@ -49,8 +53,12 @@ class Encounter < ApplicationRecord
       when 41000..59999                 then 22.0
       when 50000..61999                 then 23.0
       when 62000..74999                 then 24.0
-      when 75000                 then 25.0
-      else  26.0
+      when 75000..89999                 then 25.0
+      when 90000..104999                then 26.0
+      when 105000..119999                then 27.0
+      when 120000..134999                then 28.0
+      when 135000..149999                then 29.0
+      else  30.0
     end
   end
 

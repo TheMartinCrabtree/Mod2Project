@@ -1,10 +1,32 @@
-<h1>ENCOUNTERS</h1>
 
+
+<%= form_for(@encounter) do |f| %>
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :monster_quantity %>
+        <%= f.select(:monster_quantity, (1..10))%>
+    </div>
+    
+    <div>
+        <%= f.label :player_ids %>
+        <%= f.collection_check_boxes(:player_ids, @players, :id, :name) %>
+    </div>
 
 <% form_for @encounter do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name %>
 
 
+    <div>
+        For Testing:
+        <%= f.label :dungeonmaster_id %>
+        <%= f.collection_select(:dungeonmaster_id, @dungeonmasters, :id, :name) %>
+    </div>
+    
+    <% #placeholder for adding optional terrain %>
+
+    <%= f.submit %>
 <%end%>
