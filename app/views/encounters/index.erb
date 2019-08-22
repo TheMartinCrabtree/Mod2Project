@@ -3,6 +3,13 @@
 <%= link_to "Create an Encounter", new_encounter_path %>
 
 <% @encounters.each do |encounter| %>
-<li> The name of this encounter is <%= link_to encounter.name %></li>
-
+    <li> 
+        <span>
+            The name of this encounter is <%= link_to encounter.name, encounter %>
+        </span>
+        <span>
+            <%= button_to 'delete', encounter, method: :delete %>
+        </span>
+        
+    </li>
 <% end %>

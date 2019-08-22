@@ -54,6 +54,11 @@
     text-align: center;
 }
 
+
+.button_to {
+    display: inline;
+}
+  
 form {
   position: relative;
 
@@ -174,7 +179,9 @@ button:focus {
 
 .blindcenter a{
     margin: auto;
+
 }
+
 
 
 
@@ -205,3 +212,4 @@ form input{
     size: 1fr;
 
 }
+
