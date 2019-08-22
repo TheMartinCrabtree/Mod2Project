@@ -19,8 +19,10 @@
             <% end %>
     </div>
 
-<p align="left">
+<p>
+
     <%= form_for(@encounter) do |f| %>
+        Available Monsters:
         <div>
             <% @monster_list.each do |monster| %>
                 <span><%= monster.monster_name %></span>

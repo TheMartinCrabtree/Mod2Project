@@ -13,9 +13,13 @@
 
  */
 
- @import "bootstrap";
+@import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Metal+Mania&display=swap');
-
+main{
+    width: 80%;
+    max-width:1000px;
+    margin: 0 auto; 
+}
  body {
      background-color: lightblue;
     background-image: url(/assets/bg_template.jpg);
@@ -34,10 +38,13 @@
  .flex-container{
 
      display: grid;
+     flex-direction: row;
+     align-items: flex-start;
+     justify-content: space-evenly;
+
      
     // flex-flow: row wrap;
     // align-content: space-around;
-    // justify-content: flex-start;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-row-gap: 1em;
     text-align: center;
@@ -67,13 +74,18 @@
 form {
   position: relative;
 
+  background-color: rgba(185, 83, 0, 0.1);
+
   width  : 740px;
   height : 498px;
   margin : 0 auto;
 }
+
 label {
   font : .8em "Metal Mania", sans-serif;
 }
+
+
 
 input, textarea {
   font    : .9em/1.5em "Metal Mania", sans-serif;
@@ -98,11 +110,15 @@ textarea {
   overflow: auto;
 }
 
+
+
 input:focus, textarea:focus {
   background   : rgba(0,0,0,.1);
   border-radius: 5px;
   outline      : none;
 }
+
+
 
 button {
   position     : absolute;
@@ -145,10 +161,10 @@ button:focus {
 
 .group-paths{
     display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
+    //grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
     margin: auto;
-    grid-column-gap: 25em;
+    grid-column-gap: 5%;
     a{
          color: darkslategray;
   padding: 5px 7px;
@@ -211,6 +227,10 @@ a.button:active {
 
 form input{
     width: 25%;
+}
+
+input[type=checkbox]{
+    width: 5%
 }
 
 input[type=text] {
