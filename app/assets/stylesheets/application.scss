@@ -54,4 +54,154 @@
     text-align: center;
 }
 
+form {
+  position: relative;
+
+  width  : 740px;
+  height : 498px;
+  margin : 0 auto;
+}
+label {
+  font : .8em "Metal Mania", sans-serif;
+}
+
+input, textarea {
+  font    : .9em/1.5em "Metal Mania", sans-serif;
+
+  border  : none;
+  padding : 0 10px;
+  margin  : 0;
+  width   : 240px;
+
+  background: none;
+}
+
+textarea {
+  display : block;
+
+  padding : 10px;
+  margin  : 10px 0 0 -10px;
+  width   : 340px;
+  height  : 360px;
+
+  resize  : none;
+  overflow: auto;
+}
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+button {
+  position     : absolute;
+  left         : 440px;
+  top          : 360px;
+
+  padding      : 5px;
+
+  font         : bold .6em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+
+  cursor       : pointer;
+
+-webkit-transform: rotate(-1.5deg);
+   -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+     -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg);
+}
+
+button:after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline   : none;
+  background: #000;
+  color   : #FFF;
+}
+
+#centered_form{
+   display: flexbox;
+    text-align: center;
+    justify-content: center;
+}
     
+
+.group-paths{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    margin: auto;
+    grid-column-gap: 25em;
+    a{
+         color: darkslategray;
+  padding: 5px 7px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  border: 3px ridge darkslategray;
+  padding: 10px;
+  width: 135px;
+  font-size: 1em;
+  display: block;
+  align-content: space-around; 
+  border-radius: 4px;
+  color: rgba(255,255,255,.6);
+  margin-left: 10px;
+  background: darkslategray;
+  letter-spacing: 1px;
+  -webkit-transition: all 300ms;
+  float: left;
+    } 
+    a:hover {
+    background: rgba(0,0,0,.5);
+  color: darkslategray;
+  border-color: rgba(0,0,0,1);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0), 0 1px 1px rgba(0,0,0,.2);
+  font-weight: normal;
+  letter-spacing: 2px;
+    }
+}
+
+
+.blindcenter a{
+    margin: auto;
+}
+
+
+
+
+
+a.button:active {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.2), 0 1px 1px rgba(0,0,0,.2);
+}
+
+#center {
+  width: 694px;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  padding: 0;
+  height: 43px;
+}
+
+form input{
+    width: 25%;
+}
+
+#bigsubmit{
+    size: 1fr;
+
+}

@@ -1,11 +1,9 @@
 <h1>Select a Monster to Learn More</h1>
 
-<div class="blindcenter">
-<div class = "centeredbox">
-<%= link_to "All Players", players_path %> <br>
-<%= link_to "All Encounters", encounters_path %> <br>
-<%= link_to "Logout", "/welcome" %> <br>
-</div>
+<div class="blindcenter group-paths" >
+<div class="jackcenter"><%= link_to "All Players", players_path %> </div>
+<%= link_to "My Encounters", encounters_path %>
+<%= link_to "Logout", "/welcome" %>
 </div>
 
 
