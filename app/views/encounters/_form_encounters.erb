@@ -16,8 +16,6 @@
         <%= f.collection_check_boxes(:player_ids, @players, :id, :name) %>
     </div>
 
-<% form_for @encounter do |f| %>
-
 
 
     <div>
@@ -26,7 +24,7 @@
         <%= f.collection_select(:dungeonmaster_id, @dungeonmasters, :id, :name) %>
     </div>
     
-    <% #placeholder for adding optional terrain %>
+
 
     <%= f.submit %>
 <%end%>
