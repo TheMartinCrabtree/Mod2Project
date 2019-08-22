@@ -19,10 +19,6 @@ class EncountersController < ApplicationController
         @encounters = Encounter.all
     end
 
-    def new
-        @encounter = Encounter.new
-    end
-
 
     def create
         @encounter = Encounter.create(encounter_params)
