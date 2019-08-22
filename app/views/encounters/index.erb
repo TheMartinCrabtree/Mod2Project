@@ -1,6 +1,15 @@
-<h1>Encounters INdex</h1>
+<h1>Encounters Index</h1>
 
+<div class="blindcenter group-paths" >
+<div class="jackcenter"><%= link_to "All Players", players_path %> </div>
+<%= link_to "My Monsters", monsters_path %>
+<%= link_to "Logout", "/welcome" %>
+<br>
 <%= link_to "Create an Encounter", new_encounter_path %>
+</div>
+
+
+
 
 <% @encounters.each do |encounter| %>
     <li> 
