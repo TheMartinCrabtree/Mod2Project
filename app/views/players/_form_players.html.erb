@@ -1,3 +1,5 @@
+<div class="blindcenter">
+
 <%= form_for @player do |p| %>
 
 <%= p.label :name %>
@@ -9,6 +11,8 @@
 <%= p.label :player_level %>
 <%= p.text_field :player_level %>
 
+<div id="bigsubmit">
 <%= p.submit %>
-
+</div>
 <% end %>
+</div>
