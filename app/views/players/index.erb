@@ -1,16 +1,29 @@
 <h1>Welcome to your Players Index Page</h1>
+<div >
+<a href = "/players/new"  type="btn btn-primary" class="btn btn-primary">Create a New Player</a>
+<a href='/encounters' type="btn btn-primary" class="btn btn-primary">All Encounters</a>
+<a href='/monsters' type="btn btn-primary" class="btn btn-primary">All Monsters</a>
+
+
+</div>
+
+<h1>My Players</h1>
+
 
 <% @players.each do |player| %>
-<div>
-<li>My name is <%= player.name %></li>
-<li>HP: <%= player.player_hp %> </li>
-<li>Level: <%= player.player_level %> </li>
-<br>
-<%= link_to "Edit My Stats", @player %>
-<!-- need to properly set this link_to -->
-</div><br>
-<%end%>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= player.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Another Brave Adventurer</h6>
+    <p class="card-text"><li>HP: <%= player.player_hp %> </li></p>
+    <p class="card-text"><li>Level: <%= player.player_level %> </li></p>
 
-<%= link_to "Create a New Player", new_player_path %>
-<%= link_to "View All Encounters", encounters_path%>
-<%= link_to "View All Monsters", monsters_path%>
+    <%= link_to "Details", player, class: "card-link", id: "player_details" %>
+  </div>
+</div>
+
+
+<% end %>
+
+
+

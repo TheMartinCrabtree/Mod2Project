@@ -1,12 +1,11 @@
-<h1>Monster Show Page</h1>
-    <ul>
-    "monster_name"
-    "monster_type"
-    "monster_size"
-    "monster_alignment"
-    "armor_class"
-    "hit_points"
-    "challenge_rating"
-    
-    </ul>
-    
+<h1><%= @monster.monster_name %></h1>
+
+<ul>
+<li> AC: <%= @monster.armor_class %></li>
+<li> HP: <%= @monster.hit_points %></li>
+<li> CR: <%= @monster.challenge_rating %></li>
+<br>
+<li> Type: <%= @monster.monster_type %></li>
+<li> Size: <%= @monster.monster_size %></li>
+<li> Alignment: <%= @monster.monster_alignment %></li>
+</ul>

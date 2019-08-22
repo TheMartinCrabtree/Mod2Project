@@ -4,4 +4,5 @@ class Player < ApplicationRecord
     has_many :encounters, through: :playerencounters
     has_many :encountermonsters, through: :encounters
     has_many :monsters, through: :encountermonsters
+
 end

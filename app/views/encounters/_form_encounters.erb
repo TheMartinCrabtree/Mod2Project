@@ -1,4 +1,5 @@
 
+
 <%= form_for(@encounter) do |f| %>
     <div>
         <%= f.label :name %>
@@ -14,6 +15,10 @@
         <%= f.label :player_ids %>
         <%= f.collection_check_boxes(:player_ids, @players, :id, :name) %>
     </div>
+
+<% form_for @encounter do |f| %>
+
+
 
     <div>
         For Testing:

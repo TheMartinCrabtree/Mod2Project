@@ -1,0 +1,11 @@
+<h1>My name is <%= @player.name  %></h1>
+
+<div>
+<p>HP: <%= @player.player_hp %></p>
+<p>Level: <%= @player.player_level %></p>
+
+
+</div>
+
+<%= link_to "Edit My Stats", edit_player_path %> 
+<%= link_to "All Players", players_path %>

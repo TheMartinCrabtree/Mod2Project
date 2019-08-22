@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'json'
+
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
