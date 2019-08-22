@@ -57,6 +57,11 @@
 
 .button_to {
     display: inline;
+    
+}
+
+.button_submit {
+    background-color: rgba(185, 83, 0, 0.5);
 }
   
 form {
@@ -207,6 +212,11 @@ a.button:active {
 form input{
     width: 25%;
 }
+
+input[type=text] {
+    background-color: rgba(188, 143, 60, 0.5);
+    color: rgb(0, 0, 0);
+  }
 
 #bigsubmit{
     size: 1fr;

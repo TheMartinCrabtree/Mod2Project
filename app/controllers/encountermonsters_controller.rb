@@ -3,11 +3,10 @@ class EncountermonstersController < ApplicationController
     
 
     def destroy
-        byebug
-
+        
         find_encountermonster()
         find_encounter()
-        # @encountermonster.delete()
+        @encountermonster.delete()
         redirect_to @encounter
     end
     
@@ -19,7 +18,7 @@ class EncountermonstersController < ApplicationController
     end
 
     def find_encounter
-        @encounter = Encounter.find(params[:id])
+        @encounter = Encounter.find(@encountermonster[:encounter_id])
     end
 
 end

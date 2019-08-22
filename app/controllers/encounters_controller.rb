@@ -14,15 +14,21 @@ class EncountersController < ApplicationController
     end
 
     def create
-        @encounter = Encounter.create(encounter_params)
-        if(@encounter.valid?)
-            attach_players_to_encounter
-            
-            redirect_to edit_encounter_path(@encounter)
-        else
-            flash[:error]=@encounter.errors.full_messages
+        if(!params[:encounter][:player_ids][1])
+            flash[:error] = "No!"
             redirect_to new_encounter_path
+        else
+            @encounter = Encounter.create(encounter_params)
+            if(@encounter.valid?)
+                attach_players_to_encounter
+                
+                redirect_to edit_encounter_path(@encounter)
+            else
+                flash[:error]=@encounter.errors.full_messages
+                redirect_to new_encounter_path
+            end
         end
+
 
     end
 

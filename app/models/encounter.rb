@@ -5,7 +5,8 @@ class Encounter < ApplicationRecord
   has_many :encountermonsters, dependent: :destroy
   has_many :monsters, through: :encountermonsters
   
-
+  validates :name, presence: true, uniqueness: true
+  
 
   # xp per CR = Monster Manual pg 10
   # player xp threshold = DMG pg 82

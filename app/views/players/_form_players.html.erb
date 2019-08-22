@@ -6,10 +6,11 @@
 <%= p.text_field :name %>
 
 <%= p.label :player_hp %>
-<%= p.number_field :player_hp %>
+<%= p.select(:player_hp, (1..450))%>
+
 
 <%= p.label :player_level %>
-<%= p.text_field :player_level %>
+<%= p.select(:player_level, (1..20))%>
 
 <div id="bigsubmit">
 <%= p.submit %>

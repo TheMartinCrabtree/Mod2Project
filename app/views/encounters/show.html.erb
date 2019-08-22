@@ -19,12 +19,16 @@
         <li>
         <span>Name: <%= link_to encountermonster.monster.monster_name, encountermonster.monster %> </span>
         <span>CR: <%= encountermonster.monster.challenge_rating %></span>
-        <span> <%= button_to "remove", encountermonster, method: :delete, :encounter => {:id => @encounter.id} %> </span>
+        <span> <%= button_to "🖕 remove 🖕", encountermonster, method: :delete, :encounter => {:id => @encounter.id} %> </span>
         </li>
     <% end %>
 </div>
-
+<p>
+<%= link_to "Edit this Encounter", edit_encounter_path(@encounter) %>
+</p>
+<p>
 <%= link_to "Return to Encounter Index", encounters_path %>
+</p>
 
 
 
