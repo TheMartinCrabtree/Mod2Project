@@ -9,16 +9,25 @@
     <div>
         Selected Monsters:
             <% if(@encounter.monsters) %>
-                
+                <ul>
+                    <% @encounter.monsters.each do |monster| %>
+                        <li>
+                            <%= link_to monster.monster_name, monster %>
+                        </li>
+                    <% end %>
+                </ul>
             <% end %>
     </div>
 
-<p>
+<p align="left">
     <%= form_for(@encounter) do |f| %>
-        <% @monster_list.each do |monster| %>
-            <span><%= monster.monster_name %></span>
-            <%= check_box_tag "monsters[]", monster.id %>  
-        <% end %>
+        <div>
+            <% @monster_list.each do |monster| %>
+                <span><%= monster.monster_name %></span>
+                <%= check_box_tag "monsters[]", monster.id %>  
+            <% end %>
+        </div>
+        
         <%= f.submit "Select Monsters"%>
     <% end %>
 

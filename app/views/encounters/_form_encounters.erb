@@ -1,28 +1,43 @@
+<% if(flash[:errors]) %>
+    <ul>
+        <% flash[:errors].each do |error| %>
+            <li>
+                <%= error %>
+            </li>
+        <%  end %>
+    </ul>
+<% end %>
+<div class="blindcenter" >
+    <%= form_for(@encounter) do |f| %>
+        <div>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+        </div>
+
+        <div>
+            <%= f.label :monster_quantity %>
+            <%= f.select(:monster_quantity, (1..10))%>
+        </div>
+        
+        <p align="left">
+            <%= f.label :player_ids %>
+            <div>
+                <span>
+                    
+                    <%= f.collection_check_boxes(:player_ids, @players, :id, :name) %>
+                </span>
+            </div>
+        </p>
+
+        <div>
+            For Testing:
+            <%= f.label :dungeonmaster_id %>
+            <%= f.collection_select(:dungeonmaster_id, @dungeonmasters, :id, :name) %>
+        </div>
+        
 
 
-<%= form_for(@encounter) do |f| %>
-    <div>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-    </div>
+        <%= f.submit %>
+    <%end%>
 
-    <div>
-        <%= f.label :monster_quantity %>
-        <%= f.select(:monster_quantity, (1..10))%>
-    </div>
-    
-    <div>
-        <%= f.label :player_ids %>
-        <%= f.collection_check_boxes(:player_ids, @players, :id, :name) %>
-    </div>
-
-    <div>
-        For Testing:
-        <%= f.label :dungeonmaster_id %>
-        <%= f.collection_select(:dungeonmaster_id, @dungeonmasters, :id, :name) %>
-    </div>
-    
-
-
-    <%= f.submit %>
-<%end%>
+</div>
