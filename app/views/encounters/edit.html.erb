@@ -1,5 +1,29 @@
 <h1>Edit Encounter</h1>
 
+    <div>
+        Current CR: TBA  
+    </div>
+    <div>
+        Target Number of Monsters: <%= @encounter[:monster_quantity] %>
+    </div>
+    <div>
+        Selected Monsters:
+            <% if(@encounter.monsters) %>
+                
+            <% end %>
+    </div>
+
+<p>
+    <%= form_for(@encounter) do |f| %>
+        <% @monster_list.each do |monster| %>
+            <span><%= monster.monster_name %></span>
+            <%= check_box_tag "monsters[]", monster.id %>  
+        <% end %>
+        <%= f.submit "Select Monsters"%>
+    <% end %>
+
+</p>
+
 
 
 

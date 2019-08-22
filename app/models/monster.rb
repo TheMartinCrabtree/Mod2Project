@@ -2,7 +2,10 @@ require 'json'
 
 
 class Monster < ApplicationRecord
-    has_and_belongs_to_many :encounters
+    has_many :encountermonsters
+    has_many :encounters, through: :encountermonsters
+    #has_and_belongs_to_many :encounters
+
     
 
     def self.find_by_cr(cr_var)
