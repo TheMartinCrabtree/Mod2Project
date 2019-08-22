@@ -9,10 +9,11 @@
 
  <h1>Full Monster List</h1>
  <div class="flex-container">
- 
-<% @monsters.each do |monster| %>
-<div class="card monstercard" style="width: 10rem">
-<p><%= link_to monster.monster_name, monster, class: "card-link"  %> </p>
+    <% @monsters.each do |monster| %>
+    <div class="card monstercard" style="width: 10rem">
+    <p><%= link_to monster.monster_name, monster, class: "card-link"  %> </p>
 </div>
 <%end%>
 </div>
+
+

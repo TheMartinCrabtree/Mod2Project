@@ -36,4 +36,7 @@ class Monster < ApplicationRecord
     end
 
 
+    def monster_params
+        params.require(:monster).permit(:monster_name, :id)
+    end
 end
