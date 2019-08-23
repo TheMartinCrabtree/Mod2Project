@@ -25,7 +25,7 @@
         <h5>Available Monsters:</h5>
         <div>
             <% @monster_list.each do |monster| %>
-                <span><%= monster.monster_name %></span>
+                <span><br><%= monster.monster_name %></span>
                 <%= check_box_tag "monsters[]", monster.id %>  
             <% end %>
         </div>
