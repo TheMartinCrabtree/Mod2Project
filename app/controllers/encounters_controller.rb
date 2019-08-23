@@ -61,6 +61,10 @@ class EncountersController < ApplicationController
         redirect_to encounters_path 
     end
 
+    def fight
+        find_encounter
+    end
+
 
     private
 
