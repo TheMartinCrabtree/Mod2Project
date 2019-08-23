@@ -1,19 +1,19 @@
 <h1>Encounter: <%= @encounter.name %> </h1>
 <div>
-    Dungeon Master: <%= @encounter.dungeonmaster.name %>
+    <h3>Dungeon Master: <%= @encounter.dungeonmaster.name %></h3>
 </div>
-<div>
-    <ul>
-        Players: <% @encounter.players.each do |player| %>
-            <li>
-                <span> Name: <%= player.name %>  </span>
-                <span> Level: <%= player.player_level %>  </span>
-                <span> HP: <%= player.player_hp %> </span> 
-            </li>
-        <% end %>
-    </ul>
-</div>
-<div>
+<p>
+    Players: <% @encounter.players.each do |player| %>
+        
+        <li>
+            <span> Name: <%= player.name %>  </span>
+            <span> Level: <%= player.player_level %>  </span>
+            <span> HP: <%= player.player_hp %> </span> 
+        </li>
+        
+    <% end %>
+</p>
+<p>
     Monsters: <% @encounter.encountermonsters.each do |encountermonster| %>
         
         <li>
@@ -22,7 +22,7 @@
         <span> <%= button_to "🖕 remove 🖕", encountermonster, method: :delete, :encounter => {:id => @encounter.id} %> </span>
         </li>
     <% end %>
-</div>
+</p>
 <p>
 <%= link_to "Edit this Encounter", edit_encounter_path(@encounter) %>
 </p>

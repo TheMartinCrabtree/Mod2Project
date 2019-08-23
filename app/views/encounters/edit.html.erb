@@ -1,13 +1,13 @@
 <h1>Edit Encounter</h1>
 
     <div>
-        Current CR: TBA  
+        <h5>Current CR: TBA  </h5>
     </div>
     <div>
-        Target Number of Monsters: <%= @encounter[:monster_quantity] %>
+        <h5>Target Number of Monsters: <%= @encounter[:monster_quantity] %> </h5>
     </div>
     <div>
-        Selected Monsters:
+        <h5>Selected Monsters:</h5>
             <% if(@encounter.monsters) %>
                 <ul>
                     <% @encounter.monsters.each do |monster| %>
@@ -22,7 +22,7 @@
 <p>
 
     <%= form_for(@encounter) do |f| %>
-        Available Monsters:
+        <h5>Available Monsters:</h5>
         <div>
             <% @monster_list.each do |monster| %>
                 <span><%= monster.monster_name %></span>
