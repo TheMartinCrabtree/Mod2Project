@@ -12,6 +12,7 @@
     <div class="flex-container">
         <% @monsters.each do |monster| %>
             <div class="card monstercard" style="width: 10rem">
+                <%= image_tag("Tarrasque.jpg") %>
                 <p><%= link_to monster.monster_name, monster, class: "card-link"  %> </p>
             </div>
         <%end%>

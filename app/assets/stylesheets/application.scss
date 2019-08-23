@@ -267,13 +267,23 @@ form input{
 }
 
 input[type=checkbox]{
-    width: 5%
+    width: auto;
 }
 
 input[type=text] {
     background-color: rgba(188, 143, 60, 0.5);
     color: rgb(0, 0, 0);
   }
+
+input[type=password]{
+    background-color: rgba(188, 143, 60, 0.5);
+    color: rgb(0, 0, 0);
+}
+
+input[type=password]{
+    background-color: rgba(188, 143, 60, 0.5);
+    color: rgb(0, 0, 0);
+}
 
 #bigsubmit{
     size: 1fr;
@@ -301,4 +311,9 @@ h3{
 
 .monstercard{
     box-shadow: 1px 2px 1px darkslategray;
+    img {
+    max-width:100%;
+    height:auto;
+    }
 }
+
