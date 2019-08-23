@@ -24,10 +24,14 @@
     <% end %>
 </p>
 <p>
-<%= link_to "Edit this Encounter", edit_encounter_path(@encounter) %>
+    <%= link_to "FIGHT!", encounter_fight_path(@encounter) %>
 </p>
 <p>
-<%= link_to "Return to Encounter Index", encounters_path %>
+    <%= link_to "Edit this Encounter", edit_encounter_path(@encounter) %>
+</p>
+
+<p>
+    <%= link_to "Return to Encounter Index", encounters_path %>
 </p>
 
 

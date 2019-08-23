@@ -88,6 +88,27 @@ main{
 
 }
 
+.flex-container3col{
+
+  display: grid;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  
+ // flex-flow: row wrap;
+ // align-content: space-around;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-row-gap: 1em;
+ text-align: left;
+ & > span{
+   padding-left: 15px;
+ }
+  
+}
+
+
+
 .centeredbox{
     display: inline-block;
     text-align: center;

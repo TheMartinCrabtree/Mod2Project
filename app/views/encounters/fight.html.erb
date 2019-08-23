@@ -1,0 +1,52 @@
+<h1>Time to Fight: <%= @encounter.name %> </h1>
+
+<div>
+    <h3>Dungeon Master: <%= @encounter.dungeonmaster.name %></h3>
+</div>
+<div class="grid-container">
+    <div class = "item1">
+        <%= image_tag("phbcover.jpg", :size => "300x200") %>
+        
+        <p>
+            <h4>Encounter tracker stuff goes here. </h4>
+        </p>
+        <p>
+            <h4>Use your imagination. It's glorious!</h4>
+        </p>    
+        
+
+
+    </div>
+    <div class = "item3">
+        <p>
+            Players: <% @encounter.players.each do |player| %>
+                <div class="flex-container3col">
+                    <span class="flex-item"> <strong> Name: </strong> <%= player.name %>  </span>
+                    
+                        <span class="flex-item"> <strong> Level: </strong>  <%= player.player_level %>  </span>
+                        <span class="flex-item"> <strong> HP:  </strong> <%= player.player_hp %> </span> 
+                    
+                </div>
+            <% end %>
+        </p>
+        <p>
+            Monsters: <% @encounter.encountermonsters.each do |encountermonster| %>
+                <div class="flex-container3col"> 
+                    
+                    <span class="flex-item">Name: <%= encountermonster.monster.monster_name %> </span>
+                    <span class="flex-item">CR: <%= encountermonster.monster.challenge_rating %></span>
+                    
+                </div>
+            <% end %>
+            
+        </p>
+        <p>
+            <%= link_to "Return to Encounter Index", encounters_path %>
+        </p>
+
+    </div>
+
+</div>
+
+
+
