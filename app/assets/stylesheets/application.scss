@@ -26,7 +26,12 @@ main{
     
  }
 
- h1, h2, h3, h4, h5, p, a {
+ h1, h2, h3, h4, h5, a {
+    font-family: "Metal Mania";
+ }
+
+ p {
+    background-color: rgba(185, 83, 0, 0.1);
     font-family: "Metal Mania";
  }
 
@@ -34,6 +39,38 @@ main{
     text-align: center;
 
  }
+
+ .grid-container {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-gap: 10px;
+  
+  padding: 10px;
+  background-color: rgba(185, 83, 0, 0.1);
+  font-family: "Metal Mania";
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+  background-color: rgba(185, 83, 0, 0.1);
+  font-family: "Metal Mania";
+}
+
+.item1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.item2 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.item3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
 
  .flex-container{
 

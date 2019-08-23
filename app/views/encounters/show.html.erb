@@ -6,9 +6,9 @@
     Players: <% @encounter.players.each do |player| %>
         
         <li>
-            <span> Name: <%= player.name %>  </span>
-            <span> Level: <%= player.player_level %>  </span>
-            <span> HP: <%= player.player_hp %> </span> 
+            <span> <strong> Name: </strong> <%= player.name %>  </span>
+            <span> <strong> Level: </strong>  <%= player.player_level %>  </span>
+            <span> <strong> HP:  </strong> <%= player.player_hp %> </span> 
         </li>
         
     <% end %>

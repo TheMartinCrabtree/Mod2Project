@@ -15,7 +15,10 @@
 <div class="card shadowed" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><%= player.name %></h5>
+    <%= image_tag("king-eric.png", :size => "120x150") %>
+    <p>
     <h6 class="card-subtitle mb-2 text-muted">Another Brave Adventurer</h6>
+    </p>
     <p class="card-text"><li>HP: <%= player.player_hp %> </li></p>
     <p class="card-text"><li>Level: <%= player.player_level %> </li></p>
 

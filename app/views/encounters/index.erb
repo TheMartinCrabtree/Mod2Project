@@ -11,15 +11,18 @@
 <h1>Encounters Index</h1>
 
 
-
-<% @encounters.each do |encounter| %>
-    <li> 
-        <span>
-            The name of this encounter is <%= link_to encounter.name, encounter %>
-        </span>
-        <span>
-            <%= button_to '⚡️delete', encounter, method: :delete %>
-        </span>
-        
-    </li>
-<% end %>
+<div class="grid-container">
+    <div class="item1">
+        <% @encounters.each do |encounter| %>
+            <div>
+                <span>
+                    The name of this encounter is <%= link_to encounter.name, encounter %>
+                </span>
+                <span>
+                    <%= button_to '⚡️delete', encounter, method: :delete %>
+                </span>
+            </div>
+            
+        <% end %>
+    </div>
+</div>

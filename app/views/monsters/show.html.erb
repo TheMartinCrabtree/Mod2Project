@@ -1,13 +1,30 @@
 <h1><%= @monster.monster_name %></h1>
 
-<ul class="blindcenter">
-<p> AC: <%= @monster.armor_class %></p>
-<p> HP: <%= @monster.hit_points %></p>
-<p> CR: <%= @monster.challenge_rating %></p>
-<br>
-<p> Type: <%= @monster.monster_type %></p>
-<p> Size: <%= @monster.monster_size %></p>
-<p> Alignment: <%= @monster.monster_alignment %></p>
+    <div class="grid-container">
+        <div class = "item1">
+            <%= image_tag("Tarrasque.jpg", :size => "200x200") %>
+        </div>
+        <div class="item2">
+            <div>
+                <span>  AC: <%= @monster.armor_class %> </span>
+                <span>  HP: <%= @monster.hit_points %> </span>
+            </div>
+            <div>
+                <span>  CR: <%= @monster.challenge_rating %> </span>
+            </div>
+            <div>
+                <span>Type: <%= @monster.monster_type %></span>
+                <span>Size: <%= @monster.monster_size %></span>
+            </div>
+            <div>
+                <span>Alignment: <%= @monster.monster_alignment %></span>
+            </div>
+        </div>
+        <div class="item3">
+            <%= link_to "All Monsters", monsters_path %>
+        </div>
+    </div>
 
-<%= link_to "All Monsters", monsters_path %>
-</ul>
+    
+
+    
